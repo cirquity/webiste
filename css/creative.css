@@ -9910,12 +9910,15 @@ header.masthead h1 {
   border: 7px solid #e9ecef;
   border-radius: 100%;
   background-color: #f4623a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .timeline > li .timeline-image h4 {
   font-size: 10px;
   line-height: 14px;
-  margin-top: 12px;
+  margin: 0;
 }
 
 .timeline > li.timeline-inverted > .timeline-panel {
@@ -9979,7 +9982,6 @@ header.masthead h1 {
   .timeline > li .timeline-image h4 {
     font-size: 13px;
     line-height: 18px;
-    margin-top: 16px;
   }
   .timeline > li.timeline-inverted > .timeline-panel {
     float: right;
@@ -10003,7 +10005,6 @@ header.masthead h1 {
   .timeline > li .timeline-image h4 {
     font-size: 18px;
     line-height: 26px;
-    margin-top: 30px;
   }
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 20px 20px;
@@ -10021,9 +10022,6 @@ header.masthead h1 {
     width: 170px;
     height: 170px;
     margin-left: -85px;
-  }
-  .timeline > li .timeline-image h4 {
-    margin-top: 40px;
   }
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 100px 20px 20px;
