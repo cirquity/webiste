@@ -9,6 +9,11 @@
       max-width: 400px;
       margin: 0 auto;
       cursor: pointer;
+      .portfolio-icon {
+        background-color: $white;
+        text-align: center;
+        font-size: 150px;
+      }
       .portfolio-hover {
         position: absolute;
         width: 100%;
@@ -54,7 +59,6 @@
         font-size: 16px;
         font-style: italic;
         margin: 0;
-        @include serif-font;
       }
     }
   }
@@ -89,7 +93,6 @@
       font-size: 16px;
       font-style: italic;
       margin: 20px 0 30px;
-      @include serif-font;
     }
     ul.list-inline {
       margin-top: 0;
