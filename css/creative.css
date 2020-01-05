@@ -9906,13 +9906,13 @@ header.masthead h1 {
   height: 80px;
   margin-left: 0;
   text-align: center;
-  color: white;
-  border: 7px solid #e9ecef;
-  border-radius: 100%;
-  background-color: #f4623a;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 7px solid #e9ecef;
+  border-radius: 100%;
+  background-color: #f4623a;
 }
 
 .timeline > li .timeline-image h4 {
