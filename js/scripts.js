@@ -3,7 +3,7 @@
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
@@ -40,6 +40,7 @@
   $(window).scroll(navbarCollapse);
 
   // Magnific popup calls
+  /*
   $('#portfolio').magnificPopup({
     delegate: 'a',
     type: 'image',
@@ -54,5 +55,5 @@
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
     }
   });
-
+  */
 })(jQuery); // End of use strict

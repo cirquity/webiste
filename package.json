@@ -1,11 +1,11 @@
 {
-    "title": "Creative",
-    "name": "startbootstrap-creative",
-    "version": "5.1.8",
+    "title": "Cirquity",
+    "name": "cirquity-website",
+    "version": "0.1.0",
     "scripts": {
         "start": "node_modules/.bin/gulp watch"
     },
-    "description": "Creative is a stylish one page HTML theme for Bootstrap.",
+    "description": "Cirquity is a private, fast, and easy way to send money to friends and businesses!",
     "keywords": [
         "css",
         "sass",
@@ -14,19 +14,19 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/template-overviews/creative",
+    "homepage": "https://cirquity.com",
     "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-creative/issues",
-        "email": "feedback@startbootstrap.com"
+        "url": "https://github.com/cirquity/cirquity-website/issues",
+        "email": "cirquity@gmail.com"
     },
     "license": "MIT",
-    "author": "Start Bootstrap",
+    "author": "The Cirquity Developers",
     "contributors": [
-        "David Miller (http://davidmiller.io/)"
+        "Felix Landicho (https://deeterd.com)"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-creative.git"
+        "url": "https://github.com/cirquity/cirquity-website.git"
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "5.10.2",
