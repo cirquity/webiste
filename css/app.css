@@ -15829,6 +15829,16 @@ header .navbar.active {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
+@media (max-width: 767.98px) {
+  header .navbar {
+    background-color: #fff;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  }
+  header .navbar .navbar-collapse {
+    padding-top: 1rem;
+  }
+}
+
 main {
   min-height: 65vh;
 }
@@ -15911,12 +15921,22 @@ footer .footer-nav li a {
   margin-left: 20px;
 }
 
+@media (max-width: 767.98px) {
+  footer .footer-details {
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+  footer .footer-details .footer-widget {
+    margin-bottom: 2rem;
+  }
+}
+
 .hero {
   padding-bottom: 0;
 }
 
 .hero .container > .row {
-  padding-top: 7em;
+  padding-top: 7rem;
 }
 
 .hero .device .screen {
@@ -15938,6 +15958,16 @@ footer .footer-nav li a {
   opacity: 0.65;
 }
 
+@media (max-width: 767.98px) {
+  .hero .container > .row {
+    padding-top: 2rem;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
 /*
 $navbar-nav-link-padding-x: 1rem;
 $btn-border-radius: 2rem;
@@ -15952,12 +15982,24 @@ $h2-font-size: 3rem;
   color: #c2cff9;
 }
 
+@media (max-width: 767.98px) {
+  .features .container .row {
+    text-align: center;
+  }
+}
+
 .download .list-group-item a {
   font-size: .8em;
 }
 
 .download .list-group-item a:hover {
   color: #335eea !important;
+}
+
+@media (max-width: 767.98px) {
+  .download .row .col-12:first-child {
+    margin-bottom: 5rem;
+  }
 }
 
 .timeline .justify-content-center p {

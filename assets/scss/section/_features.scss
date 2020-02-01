@@ -1,7 +1,18 @@
 @import "../variables";
+@import "node_modules/bootstrap/scss/mixins";
 
 .features {
   i {
     color: $icon-color;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .features {
+    .container {
+      .row {
+        text-align: center;
+      }
+    }
   }
 }
