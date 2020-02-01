@@ -1,0 +1,26 @@
+@import "node_modules/bootstrap/scss/variables";
+
+header {
+  .navbar {
+    .navbar-brand {
+      font-weight: 800;
+    }
+    .navbar-toggler {}
+    .navbar-collapse {
+      .nav-link,
+      .btn-outline-primary {
+        font-weight: 500;
+      }
+    }
+    .navbar-brand {
+      img {
+        width: 150px;
+      }
+    }
+
+    &.active {
+      background-color: $white;
+      box-shadow: $box-shadow-sm;
+    }
+  }
+}

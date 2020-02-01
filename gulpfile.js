@@ -44,39 +44,36 @@ function browserSyncReload(done) {
 
 // Clean vendor
 function clean() {
-  return del(["./vendor/"]);
+  return del(["./vendor/", "./img/vendor/"]);
 }
 
 // Bring third party dependencies from node_modules into vendor directory
 function modules() {
   // Bootstrap JS
-  var bootstrap = gulp.src('./node_modules/bootstrap/dist/js/**/*')
-    .pipe(gulp.dest('./vendor/bootstrap/js'));
-  // Font Awesome CSS
-  var fontAwesomeCSS = gulp.src('./node_modules/@fortawesome/fontawesome-free/css/**/*')
-    .pipe(gulp.dest('./vendor/fontawesome-free/css'));
+  let bootstrap = gulp.src('./node_modules/bootstrap/dist/js/**/*')
+    .pipe(gulp.dest('./vendor/bootstrap'));
   // Font Awesome Webfonts
-  var fontAwesomeWebfonts = gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/**/*')
-    .pipe(gulp.dest('./vendor/fontawesome-free/webfonts'));
-  // jQuery Easing
-  var jqueryEasing = gulp.src('./node_modules/jquery.easing/*.js')
-    .pipe(gulp.dest('./vendor/jquery-easing'));
-  // Magnific Popup
-  var magnificPopup = gulp.src('./node_modules/magnific-popup/dist/*')
-    .pipe(gulp.dest('./vendor/magnific-popup'));
+  let fontAwesomeWebfonts = gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/**/*')
+    .pipe(gulp.dest('./vendor/fontawesome'));
+  // Owl Carousel Js
+  let owlCarouselJs = gulp.src('./node_modules/owl.carousel/dist/*.js')
+      .pipe(gulp.dest('./vendor/owl.carousel'));
+  // Owl Carousel Images
+  let owlCarouselImages = gulp.src('./node_modules/owl.carousel/src/img/**/*')
+      .pipe(gulp.dest('./img/vendor/owl.carousel'));
   // jQuery
-  var jquery = gulp.src([
+  let jquery = gulp.src([
       './node_modules/jquery/dist/*',
       '!./node_modules/jquery/dist/core.js'
     ])
     .pipe(gulp.dest('./vendor/jquery'));
-  return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, jqueryEasing, magnificPopup);
+  return merge(bootstrap, fontAwesomeWebfonts, owlCarouselJs, owlCarouselImages, jquery);
 }
 
 // CSS task
 function css() {
   return gulp
-    .src("./scss/**/*.scss")
+    .src("./assets/scss/**/*.scss")
     .pipe(plumber())
     .pipe(sass({
       outputStyle: "expanded",
@@ -102,8 +99,8 @@ function css() {
 function js() {
   return gulp
     .src([
-      './js/*.js',
-      '!./js/*.min.js'
+      './assets/script/*.js',
+      '!./assets/script/*.min.js'
     ])
     .pipe(uglify())
     .pipe(header(banner, {
@@ -116,22 +113,29 @@ function js() {
     .pipe(browsersync.stream());
 }
 
+function img() {
+  return gulp.src('./assets/img/**/*')
+      .pipe(gulp.dest('./img'));
+}
+
 // Watch files
 function watchFiles() {
-  gulp.watch("./scss/**/*", css);
-  gulp.watch(["./js/**/*", "!./js/**/*.min.js"], js);
+  gulp.watch("./assets/scss/**/*", css);
+  gulp.watch(["./assets/script/**/*", "!./assets/script/**/*.min.js"], js);
+  gulp.watch("./assets/img/**/*", img);
   gulp.watch("./**/*.html", browserSyncReload);
 }
 
 // Define complex tasks
 const vendor = gulp.series(clean, modules);
-const build = gulp.series(vendor, gulp.parallel(css, js));
+const build = gulp.series(vendor, gulp.parallel(css, js, img));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks
 exports.css = css;
 exports.js = js;
 exports.clean = clean;
+exports.img = img;
 exports.vendor = vendor;
 exports.build = build;
 exports.watch = watch;
