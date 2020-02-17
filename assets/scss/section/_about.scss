@@ -1,0 +1,23 @@
+.about {
+  .form-row {
+    margin-right: -.8rem;
+    margin-left: -.8rem;
+
+    > .col,
+    > [class*="col-"] {
+      padding-right: .8rem;
+      padding-left: .8rem;
+    }
+  }
+
+  .card {
+    .card-body {
+      padding: 3rem 2rem !important;
+
+      p {
+        line-height: 1.9;
+      }
+    }
+  }
+}
+

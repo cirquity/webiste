@@ -15931,10 +15931,6 @@ footer .footer-nav li a {
   }
 }
 
-.hero {
-  padding-bottom: 0;
-}
-
 .hero .container > .row {
   padding-top: 7rem;
 }
@@ -15966,6 +15962,25 @@ footer .footer-nav li a {
   .hero h1 {
     font-size: 2rem;
   }
+}
+
+.about .form-row {
+  margin-right: -.8rem;
+  margin-left: -.8rem;
+}
+
+.about .form-row > .col,
+.about .form-row > [class*="col-"] {
+  padding-right: .8rem;
+  padding-left: .8rem;
+}
+
+.about .card .card-body {
+  padding: 3rem 2rem !important;
+}
+
+.about .card .card-body p {
+  line-height: 1.9;
 }
 
 /*

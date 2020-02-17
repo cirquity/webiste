@@ -27,10 +27,10 @@
     });
 
     // ================================================
-    // Preventing URL update on navigation link click
     // ================================================
+    // Preventing URL update on navigation link click
     $('.link-scroll').on('click', function (e) {
-        var anchor = $(this);
+        let anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $(anchor.attr('href')).offset().top - $('header .navbar').outerHeight()
         }, 1000);
