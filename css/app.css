@@ -16001,6 +16001,12 @@ $h2-font-size: 3rem;
   .features .container .row {
     text-align: center;
   }
+  .features .container .row .list-group {
+    text-align: left;
+  }
+  .features .container .row .card-group {
+    box-shadow: none !important;
+  }
 }
 
 .download .list-group-item a {

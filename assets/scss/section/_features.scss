@@ -12,6 +12,14 @@
     .container {
       .row {
         text-align: center;
+
+        .list-group {
+          text-align: left;
+        }
+
+        .card-group {
+          box-shadow: none !important;
+        }
       }
     }
   }
