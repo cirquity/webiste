@@ -11,6 +11,11 @@
     .screen {
       position: relative;
 
+      svg {
+        width: 100%;
+        height: auto;
+      }
+
       .laptop {
         position: relative;
         z-index: 2;

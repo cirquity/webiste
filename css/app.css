@@ -15777,8 +15777,7 @@ ul, ol {
 }
 
 section {
-  padding-top: 6.25rem;
-  padding-bottom: 6.25rem;
+  padding: 6.25rem 1rem;
 }
 
 section .title {
@@ -15943,6 +15942,11 @@ footer .footer-nav li a {
 
 .hero .device .screen {
   position: relative;
+}
+
+.hero .device .screen svg {
+  width: 100%;
+  height: auto;
 }
 
 .hero .device .screen .laptop {
