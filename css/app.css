@@ -16222,5 +16222,9 @@ $h2-font-size: 3rem;
 }
 
 .partners img {
-  height: 5em;
+  height: 3em;
+}
+
+.partners .partner-logo {
+  margin: 0 20px;
 }
