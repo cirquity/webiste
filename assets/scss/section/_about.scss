@@ -10,9 +10,35 @@
     }
   }
 
+  .position-relative {
+    display: flex;
+    align-items: center;
+
+    svg {
+      height: auto;
+      width: 150%;
+    }
+    &.img-full {
+      svg {
+        width: 100%;
+      }
+    }
+    &.img-left {
+      svg {
+        margin-left: -4rem;
+      }
+    }
+    &.img-right {
+      svg {
+        margin-right: -4rem;
+        transform: scaleX(-1);
+      }
+    }
+  }
+
   .card {
     .card-body {
-      padding: 3rem 2rem !important;
+      padding: 5rem 2rem !important;
 
       p {
         line-height: 1.9;

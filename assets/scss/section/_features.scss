@@ -5,14 +5,18 @@
   i {
     color: $icon-color;
   }
+
+  .feature-block {
+    svg {
+      max-height: 110px;
+    }
+  }
 }
 
 @include media-breakpoint-down(sm) {
   .features {
     .container {
       .row {
-        text-align: center;
-
         .list-group {
           text-align: left;
         }
