@@ -45,3 +45,7 @@ label {
 .shadow-light {
   box-shadow: 0 1.5rem 4rem rgba($body-color, .05);
 }
+
+.address {
+  word-break: break-word;
+}

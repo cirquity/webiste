@@ -15810,6 +15810,10 @@ label {
   box-shadow: 0 1.5rem 4rem rgba(22, 28, 45, 0.05);
 }
 
+.address {
+  word-break: break-word;
+}
+
 header .navbar .navbar-brand {
   font-weight: 800;
 }
@@ -15971,6 +15975,12 @@ footer .footer-nav li a {
   }
   .hero h1 {
     font-size: 2rem;
+  }
+  .hero.gifts {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
