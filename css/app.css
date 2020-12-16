@@ -15801,6 +15801,10 @@ label {
   color: #c2cff9;
 }
 
+.line-through {
+  text-decoration: line-through;
+}
+
 .sub-heading {
   color: #506690;
   margin-bottom: 4em;
@@ -16268,4 +16272,68 @@ $h2-font-size: 3rem;
 
 .partners .partner-logo {
   margin: 0 20px;
+}
+
+.positioning .position {
+  position: relative;
+  padding: 8%;
+  background: repeating-linear-gradient(130deg, rgba(217, 226, 239, 0.7), rgba(217, 226, 239, 0.7) 1px, #f1f4f8 1px, #f1f4f8 20px);
+  border: 1px solid #c6d3e6;
+}
+
+.positioning .position .safe-top,
+.positioning .position .safe-bot {
+  background-color: rgba(198, 211, 230, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 8.1%;
+  height: 13.1%;
+}
+
+.positioning .position .safe-top {
+  top: 0;
+  right: 0;
+}
+
+.positioning .position .safe-bot {
+  bottom: 0;
+  left: 0;
+}
+
+.positioning .position .logo-outer {
+  background-color: rgba(249, 251, 253, 0.7);
+  border: 1px solid rgba(198, 211, 230, 0.5);
+}
+
+.positioning .position .logo-outer img {
+  width: 100%;
+}
+
+.options .logo-social {
+  margin-top: 50px;
+}
+
+.options .logo-sample {
+  border: 1px solid #c6d3e6;
+  padding: 8%;
+}
+
+.options .logo-sample img {
+  width: 100%;
+}
+
+.options .logo-sample.icon {
+  border-radius: 10px;
+}
+
+.options .logo-sample.alt {
+  background-color: #335eea;
+  border: 1px solid #335eea;
+}
+
+.options .logo-sample.dark {
+  background-color: #1b2a4e;
+  border: 1px solid #1b2a4e;
 }

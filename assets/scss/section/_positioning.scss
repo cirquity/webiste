@@ -1,0 +1,72 @@
+@import "node_modules/bootstrap/scss/variables";
+
+.positioning {
+  .position {
+    position: relative;
+    padding: 8%;
+    background: repeating-linear-gradient(
+      130deg,
+      rgba($gray-300, 0.7),
+      rgba($gray-300, 0.7) 1px,
+      $gray-200 1px,
+      $gray-200 20px
+    );
+    border: 1px solid $gray-400;
+
+    .safe-top,
+    .safe-bot {
+      background-color: rgba($gray-400, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 8.1%;
+      height: 13.1%;
+    }
+    .safe-top {
+      top: 0;
+      right: 0;
+    }
+    .safe-bot {
+      bottom: 0;
+      left: 0;
+    }
+
+    .logo-outer {
+      background-color: rgba($light, 0.7);
+      border: 1px solid rgba($gray-400, 0.5);
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.options {
+  .logo-social {
+    margin-top: 50px;
+  }
+  .logo-sample {
+    border: 1px solid $gray-400;
+    padding: 8%;
+
+    img {
+      width: 100%;
+    }
+
+    &.icon {
+      border-radius: 10px;
+    }
+
+    &.alt {
+      background-color: $primary;
+      border: 1px solid $primary;
+    }
+
+    &.dark {
+      background-color: $dark;
+      border: 1px solid $dark;
+    }
+  }
+}
